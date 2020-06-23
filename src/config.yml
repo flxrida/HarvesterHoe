@@ -1,0 +1,114 @@
+#
+#     HarvesterHoe - by Paper
+#
+
+# Placeholders:
+# %gem_hunter% - shows the level of this encantment
+# %fortune% - shows the level of this encantment
+# %spawner_hunter% - shows the level of this encantment
+# %auto_sell% - shows the level of this encantment
+
+messages:
+  no_permission: "&cNo permissions."
+  no_player: "&cCannot find player: %target%"
+  give:
+    usage: "&cUsage: /hh give (player)"
+    success: "&aYou have given %target% a harvester hoe."
+  insufficient_funds: "&cYou do not have enough money to afford this upgrade."
+  full_inventory: "&cYour inventory is full, please clear it."
+  sold_sugarcane: "&aYou have sold &a&l%amount%x &asugarcane for &c$%money%&a."
+
+harvester_item:
+  material: "DIAMOND_HOE"
+  name: "&b&lHarvester Hoe"
+  lore:
+    - "&7Mine sugarcane with ease."
+    - ""
+    - "&6&lUpgrades:"
+    - " &8&l» &eGem Hunter: &c%gem_hunter%"
+    - " &8&l» &dFortune: &c%fortune%"
+    - " &8&l» &aSpawner Hunter: &c%spawner_hunter%"
+    - " &8&l» &9Auto Sell: &c%auto_sell%"
+    - ""
+    - "&7Shift-right click in order to upgrade your"
+    - "&7harvester hoe."
+
+inventory:
+  upgrade_inventory:
+    name: "&c&l&nUpgrade Harvester:"
+    items:
+      gem_hunter:
+        material: "EMERALD"
+        name: "&e&lGem Hunter"
+        lore:
+          - "&7Gain more gems."
+          - ""
+          - "&7Current tier: &e%current_tier%"
+          - "&7Current Bonus: &e%current_bonus%x"
+          - ""
+          - "&7Upgrade fee: &e$%upgrade_fee%"
+          - "&7Next bonus: &e%next_bonus%x"
+          - ""
+          - "&7Click to upgrade."
+      fortune:
+        material: "SUGAR_CANE"
+        name: "&d&lFortune"
+        lore:
+          - "&7Gain more sugarcane."
+          - ""
+          - "&7Current tier: &d%current_tier%"
+          - "&7Current Bonus: &d%current_bonus%x"
+          - ""
+          - "&7Upgrade fee: &d$%upgrade_fee%"
+          - "&7Next bonus: &d%next_bonus%x"
+          - ""
+          - "&7Click to upgrade."
+      spawner_hunter:
+        material: "MOB_SPAWNER"
+        name: "&a&lSpawner Hunter"
+        lore:
+          - "&7Have a chance of receiving a mob spawner."
+          - ""
+          - "&7Current tier: &a%current_tier%"
+          - "&7Current Bonus: &a%current_bonus%%"
+          - ""
+          - "&7Upgrade fee: &a$%upgrade_fee%"
+          - "&7Next bonus: &a%next_bonus%%"
+          - ""
+          - "&7Click to upgrade."
+      auto_sell:
+        material: "PAPER"
+        name: "&9&lAuto Sell"
+        lore:
+          - "&7Auto sell when breaking sugarcane."
+          - ""
+          - "&7Current tier: &a%current_tier%"
+          - "&7Current Bonus: &a%current_bonus%"
+          - ""
+          - "&7Upgrade fee: &a$%upgrade_fee%"
+          - "&7Next bonus: &a%next_bonus%"
+          - ""
+          - "&7Click to upgrade."
+      filler:
+        material: "STAINED_GLASS_PANE"
+        data: 3
+
+enchants:
+  gem_hunter:
+    multiplier: 1.5 # This will be the multiplier that will multiplied with the level of this enchant
+    # to produce more gems, it will round it to the closest integer.
+    base_price: 1000 # The base price of the upgrade
+    price_multiplier: 1.2 #The multiplier that will be used to multiply with the base price
+  fortune:
+    multiplier: 1.5 # This will be the multiplier that will multiplied with the level of this enchant
+                    # to produce more sugarcane, it will round it to the closest integer.
+    base_price: 200 # The base price of the upgrade
+    price_multiplier: 1.2 #The multiplier that will be used to multiply with the base price
+  spawner_hunter:
+    multiplier: 1.5 # This will be the multiplier that will multiplied with the level of this enchant
+                    # make a higher chance of recieving a spawner.
+    base_price: 3000 # The base price of the upgrade
+    price_multiplier: 1.2 #The multiplier that will be used to multiply with the base price
+  auto_sell:
+    price: 10 # The price that one sugarcane sells for
+    base_price: 100000 # The base price of the upgrade

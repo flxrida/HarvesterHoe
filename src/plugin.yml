@@ -1,0 +1,8 @@
+name: HarvesterHoe
+main: me.paper.harvesterhoe.HarvesterHoe
+version: 1.0
+author: Paper
+description: A harvesterhoe plugin created by Paper
+commands:
+  hh:
+    aliases: [harvesterhoe, harvester, hoe]
