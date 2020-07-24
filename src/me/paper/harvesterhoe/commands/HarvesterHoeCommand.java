@@ -19,7 +19,7 @@ public class HarvesterHoeCommand implements CommandExecutor, Color {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
 
-        if (sender.hasPermission("hh.give")) {
+        if (sender.hasPermission("pickupgrade.give")) {
 
             if (args.length == 2) {
 
