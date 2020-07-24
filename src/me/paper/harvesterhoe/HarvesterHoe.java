@@ -22,7 +22,7 @@ public class HarvesterHoe extends JavaPlugin {
     public void onEnable() {
         instance = this;
         if (!setupEconomy()) {
-            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "HarvesterHoe by Paper requires Vault in order to work properly!");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "PickaxeUpgrades requires Vault in order to work properly!");
             Bukkit.getPluginManager().disablePlugin(this);
             return;
         }else {
@@ -31,14 +31,14 @@ public class HarvesterHoe extends JavaPlugin {
             loadConfig();
             loadCommands();
             loadListeners();
-            Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "HarvesterHoe by Paper has been successfully enabled.");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "PickaxeUpgrades has been successfully enabled.");
         }
     }
 
     public void onDisable() {
         enchantManager.unload();
         instance = null;
-        Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "HarvesterHoe by Paper is shutting down...");
+        Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "PickaxeUpgrades is shutting down...");
     }
 
     private void loadConfig() {
